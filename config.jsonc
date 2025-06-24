@@ -3,8 +3,8 @@
     // --------------------------------------------------
     // - Visuals
     // --------------------------------------------------
-    "spacing": 4,
-    "margin": "5 10 5 10",
+    "spacing": 4,  // gaps between modules
+    "margin": "8 8 12 8",
 
     // --------------------------------------------------
     // - Modules Left
@@ -17,7 +17,6 @@
     // - Modules Center
     // --------------------------------------------------
     "modules-center": [
-        "clock",
         "hyprland/window"
     ],
 
@@ -28,7 +27,8 @@
         "pulseaudio",
         "power-profiles-daemon",
         "backlight",
-        "battery"
+        "battery",
+        "clock"
     ],
 
     // --------------------------------------------------
@@ -61,12 +61,14 @@
     },
 
     "backlight": {
-        "format": "{percent}% {icon}"
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
     "clock": {
         "interval": 60,  // refresh every 60 seconds
-        "format": "{:%H:%M}{:%d-%m-%Y}"
+        // "format": "{:%H:%M\n%d-%m-%Y}"
+        "format": "{:%H:%M}"
     },
 
     "hyprland/workspaces": {
@@ -77,18 +79,30 @@
         //     "class<firefox>": "",
         //     "class<kitty>": ""
         // }
-        "format": "{name}: {icon}",
+        "format": "{name}:   {icon}",
         "format-icons": {
-            "1": "",
-            "2": "󰈹",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
-            "7": "",
-            "8": "",
-            "9": "",
-            "10": "󰓇"
+            "1": " ",
+            "2": "󰈹 ",
+            "3": " ",
+            "4": " ",
+            "5": " ",
+            "6": " ",
+            "7": " ",
+            "8": " ",
+            "9": " ",
+            "10": "󰓇 "
+        }
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
         }
     }
 

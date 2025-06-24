@@ -1,0 +1,96 @@
+{
+
+    // --------------------------------------------------
+    // - Visuals
+    // --------------------------------------------------
+    "spacing": 4,
+    "margin": "5 10 5 10",
+
+    // --------------------------------------------------
+    // - Modules Left
+    // --------------------------------------------------
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    // --------------------------------------------------
+    // - Modules Center
+    // --------------------------------------------------
+    "modules-center": [
+        "clock",
+        "hyprland/window"
+    ],
+
+    // --------------------------------------------------
+    // - Modules Right
+    // --------------------------------------------------
+    "modules-right": [
+        "pulseaudio",
+        "power-profiles-daemon",
+        "backlight",
+        "battery"
+    ],
+
+    // --------------------------------------------------
+    // - Module Settings
+    // --------------------------------------------------
+    "battery": {
+        "interval": 5,
+        "format": "{icon}{capacity}%",
+        "format-charging": "󱐋{icon}{capacity}%",
+        "format-icons": [
+            "󰁺 ",
+            "󰁻 ",
+            "󰁼 ",
+            "󰁽 ",
+            "󰁾 ",
+            "󰁿 ",
+            "󰂀 ",
+            "󰂁 ",
+            "󰂂 ",
+            "󰁹 "
+        ],
+        "states": {
+            "bat-full": 100,
+            "bat-high": 80,
+            "bat-ok": 60,
+            "bat-medium": 40,
+            "bat-low": 20,
+            "bat-critical": 10
+        }
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}"
+    },
+
+    "clock": {
+        "interval": 60,  // refresh every 60 seconds
+        "format": "{:%H:%M}{:%d-%m-%Y}"
+    },
+
+    "hyprland/workspaces": {
+        // "format": "<sub>{icon}</sub> &lt; {windows} &gt;",
+        // "format-window-separator": " | ",
+        // "window-rewrite-default": "[.]",
+        // "window-rewrite": {
+        //     "class<firefox>": "",
+        //     "class<kitty>": ""
+        // }
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "󰈹",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "󰓇"
+        }
+    }
+
+}
+

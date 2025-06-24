@@ -1,0 +1,49 @@
+* {
+    font-size: 16px;
+    font-family: 'Hack Nerd Font Mono';
+}
+
+window#waybar {
+    min-height: 30px;
+    background-color: rgba(43, 48, 59, 0.5);
+    color: white;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    color: white;
+}
+
+#battery {
+    margin-right: 10px;  /* FIXME this is hacky and should go to the bars' css instead */
+    padding: 10px;
+    border: 0px solid black;
+    border-radius: 25px;
+}
+
+.bat-full {
+    background-color: rgba(42, 155, 53, 0.5) /* #2A9B35 */;
+}
+
+.bat-high {
+    background-color: rgba(140, 199, 29, 0.5) /* #8CC71D */;
+}
+
+.bat-ok {
+    background-color: rgba(211, 231, 11, 0.5) /* #D3E70B */;
+}
+
+.bat-medium {
+    background-color: rgba(247, 178, 52, 0.5) /* #F7B324 */;
+}
+
+.bat-low {
+    background-color: rgba(242, 132, 59, 0.5) /* #F2843B */;
+}
+
+.bat-critical {
+    background-color: rgba(237, 83, 83, 0.5) /* #ED5353 */;
+}
+

@@ -12,25 +12,26 @@ window#waybar {
     margin-bottom: 15px;
 }
 
-#workspaces button {
-    border-radius: 24px;
-}
-
-#workspaces button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 #workspaces {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 24px;
 }
 
 #workspaces button {
-    margin-right: 8px;
+    padding-right: 8px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#workspaces button:first-child {
+    border-radius: 24px 0px 0px 24px;
+    padding-left: 8px;
 }
 
 #workspaces button:last-child {
-    margin-right: 0px;
+    border-radius: 0px 24px 24px 0px;
 }
 
 #battery {

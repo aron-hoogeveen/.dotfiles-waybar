@@ -4,7 +4,7 @@
     // - Visuals
     // --------------------------------------------------
     "spacing": 4,  // gaps between modules
-    "margin": "8 8 12 8",
+    "margin": "8 8 8 8",
 
     // --------------------------------------------------
     // - Modules Left
@@ -36,8 +36,8 @@
     // --------------------------------------------------
     "battery": {
         "interval": 5,
-        "format": "{icon}{capacity}%",
-        "format-charging": "󱐋{icon}{capacity}%",
+        "format": "{icon}<span color=\"white\">{capacity}%</span>",
+        "format-charging": "󱐋{icon}<span color=\"white\">{capacity}%</span>",
         "format-icons": [
             "󰁺 ",
             "󰁻 ",
@@ -58,6 +58,11 @@
             "bat-low": 20,
             "bat-critical": 10
         }
+    },
+
+    "battery#2": {
+        "interval": 5,
+        "format": "{capacity}%"
     },
 
     "backlight": {

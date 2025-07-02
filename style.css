@@ -1,7 +1,7 @@
 * {
     border: none;
-    border-radius: 0px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 15px;
     min-height: 24px;
     font-family: 'Nerd Font Hack Mono';
     color: white;
@@ -14,11 +14,11 @@ window#waybar {
 
 #workspaces {
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 24px;
 }
 
 #workspaces button {
     padding-right: 8px;
+    border-radius: 0px;
 }
 
 #workspaces button:hover {
@@ -26,16 +26,15 @@ window#waybar {
 }
 
 #workspaces button:first-child {
-    border-radius: 24px 0px 0px 24px;
+    border-radius: 8px 0px 0px 8px;
     padding-left: 8px;
 }
 
 #workspaces button:last-child {
-    border-radius: 0px 24px 24px 0px;
+    border-radius: 0px 8px 8px 0px;
 }
 
 #battery {
-    border-radius: 24px;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0px 10px;
 }
@@ -65,8 +64,8 @@ window#waybar {
 }
 
 #clock {
-    background-color: rgba(240, 181, 198, 0.5);
-    border-radius: 24px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 0px 10px;
 }
 

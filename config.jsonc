@@ -3,7 +3,7 @@
     // --------------------------------------------------
     // - Visuals
     // --------------------------------------------------
-    "spacing": 6,  // gaps between modules
+    "spacing": 8,  // gaps between modules
     "margin": "8 8 8 8",
 
     // --------------------------------------------------
@@ -17,7 +17,7 @@
     // - Modules Center
     // --------------------------------------------------
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
 
     // --------------------------------------------------
@@ -25,10 +25,9 @@
     // --------------------------------------------------
     "modules-right": [
         "pulseaudio",
-        "power-profiles-daemon",
         "backlight",
-        "battery",
-        "clock"
+        "power-profiles-daemon",
+        "battery"
     ],
 
     // --------------------------------------------------
@@ -36,7 +35,7 @@
     // --------------------------------------------------
     "battery": {
         "interval": 5,
-        "format": "{icon}<span color=\"white\">{capacity}%</span>",
+        "format": "{icon}<span color=\"white\"> {capacity}%</span>",
         "format-charging": "󱐋{icon}<span color=\"white\">{capacity}%</span>",
         "format-icons": [
             "󰁺 ",
@@ -60,20 +59,16 @@
         }
     },
 
-    "battery#2": {
-        "interval": 5,
-        "format": "{capacity}%"
-    },
-
     "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{percent}%   {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
     },
 
     "clock": {
         "interval": 60,  // refresh every 60 seconds
         // "format": "{:%H:%M\n%d-%m-%Y}"
-        "format": "{:%H:%M}"
+        "format": "{:%d %b\t \t%H:%M}"
     },
 
     "hyprland/workspaces": {
@@ -104,10 +99,17 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
+            "default": " ",
+            "performance": " ",
+            "balanced": " ",
+            "power-saver": " "
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon}\t{volume}%",
+        "format-icons": {
+            "default": " "
         }
     }
 

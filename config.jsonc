@@ -1,0 +1,117 @@
+{
+
+    // --------------------------------------------------
+    // - Visuals
+    // --------------------------------------------------
+    "spacing": 8,  // gaps between modules
+    "margin": "8 8 8 8",
+
+    // --------------------------------------------------
+    // - Modules Left
+    // --------------------------------------------------
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    // --------------------------------------------------
+    // - Modules Center
+    // --------------------------------------------------
+    "modules-center": [
+        "clock"
+    ],
+
+    // --------------------------------------------------
+    // - Modules Right
+    // --------------------------------------------------
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "power-profiles-daemon",
+        "battery"
+    ],
+
+    // --------------------------------------------------
+    // - Module Settings
+    // --------------------------------------------------
+    "battery": {
+        "interval": 5,
+        "format": "{icon}<span color=\"white\"> {capacity}%</span>",
+        "format-charging": "󱐋{icon}<span color=\"white\">{capacity}%</span>",
+        "format-icons": [
+            "󰁺 ",
+            "󰁻 ",
+            "󰁼 ",
+            "󰁽 ",
+            "󰁾 ",
+            "󰁿 ",
+            "󰂀 ",
+            "󰂁 ",
+            "󰂂 ",
+            "󰁹 "
+        ],
+        "states": {
+            "bat-full": 100,
+            "bat-high": 80,
+            "bat-ok": 60,
+            "bat-medium": 40,
+            "bat-low": 20,
+            "bat-critical": 10
+        }
+    },
+
+    "backlight": {
+        "format": "{percent}%   {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 60,  // refresh every 60 seconds
+        // "format": "{:%H:%M\n%d-%m-%Y}"
+        "format": "{:%d %b\t \t%H:%M}"
+    },
+
+    "hyprland/workspaces": {
+        // "format": "<sub>{icon}</sub> &lt; {windows} &gt;",
+        // "format-window-separator": " | ",
+        // "window-rewrite-default": "[.]",
+        // "window-rewrite": {
+        //     "class<firefox>": "",
+        //     "class<kitty>": ""
+        // }
+        "format": "{name}:   {icon}",
+        "format-icons": {
+            "1": " ",
+            "2": "󰈹 ",
+            "3": " ",
+            "4": " ",
+            "5": " ",
+            "6": " ",
+            "7": " ",
+            "8": " ",
+            "9": " ",
+            "10": "󰓇 "
+        }
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": " ",
+            "performance": " ",
+            "balanced": " ",
+            "power-saver": " "
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon}\t{volume}%",
+        "format-icons": {
+            "default": " "
+        }
+    }
+
+}
+

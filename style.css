@@ -21,7 +21,7 @@ window#waybar {
 }
 
 #workspaces, #clock, #battery, #pulseaudio, #backlight, #power-profiles-daemon, #network,
-#language {
+#language, #bluetooth {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0px 10px;
 }

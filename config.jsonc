@@ -26,6 +26,7 @@
     "modules-right": [
         "hyprland/language",
         "network",
+        "bluetooth",
         "pulseaudio",
         "backlight",
         "power-profiles-daemon",
@@ -62,9 +63,18 @@
     },
 
     "backlight": {
-        "format": "{percent}%   {icon}",
+        "format": "{icon}    {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
+    },
+
+    "bluetooth": {
+        "format": "TODO bluetooth",
+        "format-disabled": "󰂲 ",
+        "format-off": "󰂲 ",
+        "format-on": "󰂯    no connection",
+        "format-connected": "󰂱    {device_alias}",
+        "on-click": "pkill blueman-manager || blueman-manager"
     },
 
     "clock": {
@@ -125,7 +135,7 @@
             "default": " "
         },
         "on-click": "pkill pavucontrol || pavucontrol"
-    }
+    },
 
 }
 

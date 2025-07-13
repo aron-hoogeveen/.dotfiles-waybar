@@ -20,7 +20,8 @@ window#waybar {
     background: transparent;
 }
 
-#workspaces, #clock, #battery, #pulseaudio, #backlight, #power-profiles-daemon, #network {
+#workspaces, #clock, #battery, #pulseaudio, #backlight, #power-profiles-daemon, #network,
+#language {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0px 10px;
 }
@@ -47,6 +48,10 @@ tooltip label {
 #workspaces button {
     padding-right: 8px;
     border-radius: 0px;
+}
+
+#workspaces button.active {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #workspaces button:hover {

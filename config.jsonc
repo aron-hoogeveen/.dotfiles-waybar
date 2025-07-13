@@ -24,6 +24,7 @@
     // - Modules Right
     // --------------------------------------------------
     "modules-right": [
+        "hyprland/language",
         "network",
         "pulseaudio",
         "backlight",
@@ -73,13 +74,6 @@
     },
 
     "hyprland/workspaces": {
-        // "format": "<sub>{icon}</sub> &lt; {windows} &gt;",
-        // "format-window-separator": " | ",
-        // "window-rewrite-default": "[.]",
-        // "window-rewrite": {
-        //     "class<firefox>": "",
-        //     "class<kitty>": ""
-        // }
         "format": "{name}:   {icon}",
         "format-icons": {
             "1": " ",
@@ -93,6 +87,10 @@
             "9": " ",
             "10": "󰓇 "
         }
+    },
+
+    "hyprland/language": {
+        "format": "󰌌     {short}"
     },
 
     "network": {
@@ -122,9 +120,11 @@
 
     "pulseaudio": {
         "format": "{icon}\t{volume}%",
+        "format-muted": " \t{volume}%",
         "format-icons": {
             "default": " "
-        }
+        },
+        "on-click": "pkill pavucontrol || pavucontrol"
     }
 
 }

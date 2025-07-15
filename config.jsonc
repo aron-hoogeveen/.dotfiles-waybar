@@ -70,9 +70,9 @@
 
     "bluetooth": {
         "format": "TODO bluetooth",
-        "format-disabled": "󰂲 ",
-        "format-off": "󰂲 ",
-        "format-on": "󰂯    no connection",
+        "format-disabled": "󰂲    disabled",
+        "format-off": "󰂲    off",
+        "format-on": "󰂯    disconnected",
         "format-connected": "󰂱    {device_alias}",
         "on-click": "pkill blueman-manager || blueman-manager"
     },
@@ -105,8 +105,8 @@
 
     "network": {
         "format-wifi": "{icon}    {essid}",
-        "format-ethernet": "󱘖 ",
-        "format-disconnected": "󰌙 ",
+        "format-ethernet": "󱘖     ethernet",
+        "format-disconnected": "󰌙     disconnected",
         "format-icons": [
             "󰤯 ",
             "󰤟 ",

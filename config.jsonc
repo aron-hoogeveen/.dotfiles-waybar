@@ -30,7 +30,8 @@
         "pulseaudio",
         "backlight",
         "power-profiles-daemon",
-        "battery"
+        "battery",
+        "custom/logout"
     ],
 
     // --------------------------------------------------
@@ -81,6 +82,11 @@
         "interval": 60,  // refresh every 60 seconds
         // "format": "{:%H:%M\n%d-%m-%Y}"
         "format": "{:%d %b\t \t%H:%M}"
+    },
+
+    "custom/logout": {
+        "format": "󰍃",
+        "on-click": "uwsm stop"
     },
 
     "hyprland/workspaces": {

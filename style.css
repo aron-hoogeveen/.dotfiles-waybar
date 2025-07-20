@@ -21,18 +21,23 @@ window#waybar {
 }
 
 #workspaces, #clock, #battery, #pulseaudio, #backlight, #power-profiles-daemon, #network,
-#language, #bluetooth, #custom-logout {
+#language, #bluetooth, #tray, #group-power {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0px 10px;
 }
 
 /* clickable modules */
-#custom-logout:hover, #pulseaudio:hover, #power-profiles-daemon:hover, #bluetooth:hover {
+#custom-logout:hover, #pulseaudio:hover, #power-profiles-daemon:hover, #bluetooth:hover,
+#custom-lock:hover, #custom-power:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
 tooltip label {
     color: black;
+}
+
+#group-power {
+    padding: 0px;
 }
 
 /*******************************************************************************

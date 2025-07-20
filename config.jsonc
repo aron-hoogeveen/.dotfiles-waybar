@@ -31,7 +31,7 @@
         "backlight",
         "power-profiles-daemon",
         "battery",
-        "custom/logout"
+        "group/group-power"
     ],
 
     // --------------------------------------------------
@@ -84,9 +84,35 @@
         "format": "{:%d %b\t \t%H:%M}"
     },
 
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/power",
+            "custom/lock",
+            "custom/logout"
+        ]
+    },
+
     "custom/logout": {
-        "format": "󰍃",
-        "on-click": "uwsm stop"
+        "format": " 󰍃 ",
+        "on-click": "uwsm stop",
+        "tooltip": false
+    },
+
+    "custom/lock": {
+        "format": " 󰍁 ",
+        "on-click": "/home/aron/scripts/swaylock.sh",
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format": " 󰐥 ",
+        "on-click": "systemctl poweroff",
+        "tooltip": false
     },
 
     "hyprland/workspaces": {
@@ -142,6 +168,10 @@
         },
         "on-click": "pkill pavucontrol || pavucontrol"
     },
+
+    "tray": {
+        "spacing": 5
+    }
 
 }
 

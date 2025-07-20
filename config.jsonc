@@ -40,7 +40,7 @@
     "battery": {
         "interval": 5,
         "format": "{icon}<span color=\"white\"> {capacity}%</span>",
-        "format-charging": "󱐋{icon}<span color=\"white\">{capacity}%</span>",
+        "format-charging": "󱐋{icon}<span color=\"white\"> {capacity}%</span>",
         "format-icons": [
             "󰁺",
             "󰁻",

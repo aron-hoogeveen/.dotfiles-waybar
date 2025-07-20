@@ -18,6 +18,11 @@
 
 window#waybar {
     background: transparent;
+    border: rgba(255, 255, 255, 0.2) 2 solid;
+}
+
+.modules-left, .modules-center, .modules-right {
+    margin: 5;
 }
 
 #workspaces, #clock, #battery, #group-pulseaudio, #group-backlight, #power-profiles-daemon, 

@@ -119,7 +119,7 @@
     "clock": {
         "interval": 60,  // refresh every 60 seconds
         // "format": "{:%H:%M\n%d-%m-%Y}"
-        "format": "{:%d %b        %H:%M}"
+        "format": "{:%d %b      %H:%M}"
     },
 
     "group/group-power": {

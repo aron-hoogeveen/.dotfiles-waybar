@@ -12,7 +12,7 @@
     border-radius: 8px;
     font-size: 15px;
     min-height: 24px;
-    font-family: 'Nerd Font Hack Mono';
+    font-family: 'Hack Nerd Font Propo';
     color: white;
 }
 
@@ -20,14 +20,14 @@ window#waybar {
     background: transparent;
 }
 
-#workspaces, #clock, #battery, #pulseaudio, #backlight, #power-profiles-daemon, #network,
-#language, #bluetooth, #tray, #group-power {
+#workspaces, #clock, #battery, #group-pulseaudio, #group-backlight, #power-profiles-daemon, 
+#group-network, #language, #group-bluetooth, #tray, #group-power {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0px 10px;
 }
 
 /* clickable modules */
-#custom-logout:hover, #pulseaudio:hover, #power-profiles-daemon:hover, #bluetooth:hover,
+#custom-logout:hover, #group-pulseaudio:hover, #power-profiles-daemon:hover, #group-bluetooth:hover,
 #custom-lock:hover, #custom-power:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }

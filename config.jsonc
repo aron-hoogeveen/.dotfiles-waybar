@@ -3,7 +3,7 @@
     // --------------------------------------------------
     // - Visuals
     // --------------------------------------------------
-    "spacing": 8,  // gaps between modules
+    "spacing": 12,  // gaps between modules
     "margin": "8 8 8 8",
 
     // --------------------------------------------------
@@ -25,10 +25,10 @@
     // --------------------------------------------------
     "modules-right": [
         "hyprland/language",
-        "network",
-        "bluetooth",
-        "pulseaudio",
-        "backlight",
+        "group/group-network",
+        "group/group-bluetooth",
+        "group/group-pulseaudio",
+        "group/group-backlight",
         "power-profiles-daemon",
         "battery",
         "group/group-power"
@@ -42,16 +42,16 @@
         "format": "{icon}<span color=\"white\"> {capacity}%</span>",
         "format-charging": "󱐋{icon}<span color=\"white\">{capacity}%</span>",
         "format-icons": [
-            "󰁺 ",
-            "󰁻 ",
-            "󰁼 ",
-            "󰁽 ",
-            "󰁾 ",
-            "󰁿 ",
-            "󰂀 ",
-            "󰂁 ",
-            "󰂂 ",
-            "󰁹 "
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
         ],
         "states": {
             "bat-full": 100,
@@ -63,32 +63,70 @@
         }
     },
 
-    "backlight": {
-        "format": "{icon}    {percent}%",
+    "group/group-backlight": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "backlight#icon",
+            "backlight#value"
+        ]
+    },
+
+    "backlight#icon": {
+        "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
     },
 
-    "bluetooth": {
-        "format": "TODO bluetooth",
-        "format-disabled": "󰂲    disabled",
-        "format-off": "󰂲    off",
-        "format-on": "󰂯    disconnected",
-        "format-connected": "󰂱    {device_alias}",
+    "backlight#value": {
+        "format": "  {percent}%",
+        "tooltip": false
+    },
+
+    "bluetooth#icon": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "format-on": "󰂯",
+        "format-connected": "󰂱",
         "on-click": "pkill blueman-manager || blueman-manager"
+    },
+
+    "bluetooth#text": {
+        "format": "  ????",
+        "format-disabled": "  disabled",
+        "format-off": "  off",
+        "format-on": "  disconnected",
+        "format-connected": "  {device_alias}",
+        "on-click": "pkill blueman-manager || blueman-manager"
+    },
+
+    "group/group-bluetooth": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "bluetooth#icon",
+            "bluetooth#text"
+        ]
     },
 
     "clock": {
         "interval": 60,  // refresh every 60 seconds
         // "format": "{:%H:%M\n%d-%m-%Y}"
-        "format": "{:%d %b\t \t%H:%M}"
+        "format": "{:%d %b        %H:%M}"
     },
 
     "group/group-power": {
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 500,
-            "transition-left-to-right": false,
+            "transition-left-to-right": false
         },
         "modules": [
             "custom/power",
@@ -116,36 +154,54 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{name}:   {icon}",
+        "format": "{name}: {icon}",
         "format-icons": {
-            "1": " ",
-            "2": "󰈹 ",
-            "3": " ",
-            "4": " ",
-            "5": " ",
-            "6": " ",
-            "7": " ",
-            "8": " ",
-            "9": " ",
-            "10": "󰓇 "
+            "1": "",
+            "2": "󰈹",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "󰓇"
         }
     },
 
     "hyprland/language": {
-        "format": "󰌌     {short}"
+        "format": "󰌌  {short}"
     },
 
-    "network": {
-        "format-wifi": "{icon}    {essid}",
-        "format-ethernet": "󱘖     ethernet",
-        "format-disconnected": "󰌙     disconnected",
-        "format-icons": [
-            "󰤯 ",
-            "󰤟 ",
-            "󰤢 ",
-            "󰤥 ",
-            "󰤨 "
+    "group/group-network": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "network#icon",
+            "network#text"
         ]
+    },
+
+    "network#icon": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "󱘖",
+        "format-disconnected": "󰌙",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ]
+    },
+
+    "network#text": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  ethernet",
+        "format-disconnected": "  disconnected"
     },
 
     "power-profiles-daemon": {
@@ -153,19 +209,34 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-            "default": " ",
-            "performance": " ",
-            "balanced": " ",
-            "power-saver": " "
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
         }
     },
 
-    "pulseaudio": {
-        "format": "{icon}\t{volume}%",
-        "format-muted": " \t{volume}%",
-        "format-icons": {
-            "default": " "
+    "group/group-pulseaudio": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true,
         },
+        "modules": [
+            "pulseaudio#icon",
+            "pulseaudio#volume"
+        ]
+    },
+
+    "pulseaudio#volume": {
+        "format": "  {volume}%",
+        "format-muted": "{volume}%",
+        "on-click": "pkill pavucontrol || pavucontrol"
+    },
+
+    "pulseaudio#icon": {
+        "format": "",
+        "format-muted": "",
         "on-click": "pkill pavucontrol || pavucontrol"
     },
 

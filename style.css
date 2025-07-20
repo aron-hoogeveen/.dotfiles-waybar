@@ -116,3 +116,17 @@ tooltip label {
     color: rgba(237, 83, 83, 1) /* #ED5353 */;
 }
 
+@keyframes blink-black {
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+#battery.bat-low:not(.charging), #battery.bat-critical:not(.charging) {
+    animation-name: blink-black;
+    animation-duration: 1s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+

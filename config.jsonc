@@ -195,7 +195,7 @@
     },
 
     "hyprland/language": {
-        "format": "󰌌  {short}"
+        "format": "󰌌  {short} ({variant})"
     },
 
     "group/group-network": {

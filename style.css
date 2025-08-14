@@ -38,6 +38,7 @@ window#waybar {
 }
 
 tooltip label {
+    background-color: white;
     color: black;
 }
 

@@ -31,7 +31,8 @@
         "group/group-backlight",
         "power-profiles-daemon",
         "battery",
-        "group/group-power"
+        "group/group-power",
+        "custom/notification-center"
     ],
 
     // --------------------------------------------------
@@ -118,8 +119,9 @@
 
     "clock": {
         "interval": 60,  // refresh every 60 seconds
-        // "format": "{:%H:%M\n%d-%m-%Y}"
-        "format": "{:%d %b      %H:%M}"
+        "format": "{:%d %b      %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "Ultiem aan het genieten van deze config!"
     },
 
     "group/group-power": {
@@ -153,6 +155,27 @@
         "tooltip": false
     },
 
+    "custom/notification-center": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "\uf0a2<span foreground='red'><sup>\uf444</sup></span>",
+            "none": "\uf0a2",
+            "dnd-notification": "\uf1f7<span foreground='red'><sup>\uf444</sup></span>",
+            "dnd-none": "\uf1f7",
+            "inhibited-notification": "\uf0a2<span foreground='red'><sup>\uf444</sup></span>",
+            "inhibited-none": "\uf0a2",
+            "dnd-inhibited-notification": "\uf1f7<span foreground='red'><sup>\uf444</sup></span>",
+            "dnd-inhibited-none": "\uf1f7"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
     "hyprland/workspaces": {
         "format": "{name}: {icon}",
         "format-icons": {
@@ -166,7 +189,9 @@
             "8": "",
             "9": "",
             "10": "󰓇"
-        }
+        },
+        "on-scroll-up": "hyprctl dispatch workspace m-1",
+        "on-scroll-down": "hyprctl dispatch workspace m+1"
     },
 
     "hyprland/language": {
@@ -195,13 +220,15 @@
             "󰤢",
             "󰤥",
             "󰤨"
-        ]
+        ],
+        "tooltip": false
     },
 
     "network#text": {
         "format-wifi": "  {essid}",
         "format-ethernet": "  ethernet",
-        "format-disconnected": "  disconnected"
+        "format-disconnected": "  disconnected",
+        "tooltip": false
     },
 
     "power-profiles-daemon": {
